@@ -1,0 +1,25 @@
+{
+  "name": "snx",
+  "productName": "Snx Resizer",
+  "version": "0.1.0-beta", 
+  "description": "A simple images resizer",
+  "main": "src/index.js",
+  "repository": "https://github.com/tahasintonmoy2/",
+  "author": "Tahasin",
+  "license": "MIT",
+  "bugs": { 
+    "url": "https://github.com/tahasintonmoy2/snx/issues"
+  },
+  "scripts": {
+    "start": "nodemon --exec electron ." 
+  }, 
+  "devDependencies": {
+    "electron": "^25.2.0",
+    "electron-builder": "^24.4.0"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.22",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}

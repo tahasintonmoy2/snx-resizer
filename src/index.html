@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    http-equiv="Content-Security-Policy"
+    content="script-src 'self' 'unsafe-inline'"
+  />
+  <link rel="stylesheet" href="./styles/index.css" />
+  <script src="./js/custom-css.js"></script>
+  <script src="./js/renderer.js" defer></script>
+  </head>
+  <body class="bg-indigo-600">
+    <div
+      class="max-w-xl m-auto h-screen flex flex-col align-center justify-center"
+    >
+      <div class="flex flex-col w-full items-center justify-center bg-grey-lighter">
+        <label
+          class="w-64 flex flex-col items-center px-4 py-7 bg-[#0f111a] text-gray-500 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:text-white"
+        >
+          <img src="../assets/icon.ico" width="64" />
+          <span class="mt-2 leading-normal">Select an image to resize</span>
+          <input id="img" type="file" class="hidden" />
+        </label>
+      </div> 
+
+      <!-- Form -->
+      <form id="img-form" class="hidden">
+        <div class="mt-6">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Width</label>
+          <input
+            type="number"
+            name="width"
+            id="width"
+            class="mt-1 focus:outline-none block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Width"
+          />
+        </div>
+
+        <div class="mt-4">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Height</label>
+          <input
+            type="number"
+            name="height"
+            id="height"
+            class="mt-1 focus:outline-none block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Height"
+          />
+        </div>
+
+        <!-- Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-80 m-auto flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Resize
+          </button>
+
+      </form>
+
+      <p class="text-white text-lg text-center font-mono mt-6"><strong>File Name: </strong><span id="filename"></span></p>
+      <p class="text-white text-lg text-center font-mono mt-2"><strong>Output directory: </strong><span id="output-path"></span></p>
+    </div>
+  </body>
+</html>
